@@ -18,9 +18,15 @@
                 <%= link_to "New Post", new_post_path %>
             </li>
               <%- if current_user %>
+                  <li>
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              </li>
               <% else %>
               <li>
                   <%= link_to "Login", new_user_session_path %>
+              </li>
+              <li>
+                  <%= link_to "Register", new_user_registration_path %>
               </li>
               <% end %>
             <li class="nav-item">
@@ -38,6 +44,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
+            <% flash.each do |a, b| %>
+                <div class="alert alert-success"> <%= b %> </div>
+                    <% end %>
+                <%= yield %>
+                    
+           
           <h1 class="mt-5">SnackSnap</h1>
           <p class="lead">For The Love Of SnackSnap</p>
           <ul class="list-unstyled">
