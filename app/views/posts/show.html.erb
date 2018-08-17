@@ -1,3 +1,9 @@
 <%= image_tag(@post.image.url(:medium)) %>
 <br>
 <%= @post.description %>
+
+<div class="text-center edit-links">
+  <%= link_to "Cancel", posts_path %>
+  |
+  <%= link_to "Edit Post", edit_post_path(@post) %>
+</div>
