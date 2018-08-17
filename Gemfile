@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # 
 # Add Devise
 gem 'devise', '~> 4.4', '>= 4.4.3'
+# Add Paperclip
+gem "paperclip", "~> 6.0.0"
 
 # Add Bootstrap
 gem 'bootstrap-sass', '~> 3.3.7'
