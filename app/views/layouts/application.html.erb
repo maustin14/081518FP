@@ -8,7 +8,9 @@
   </head>
 <body>
       <!-- Navigation -->
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -56,7 +58,47 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+
+<nav class="navbar navbar-default">
+  <div class="navbar-container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse-1" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand">
+        <%= link_to "SnackSnap", root_path %>
+      </div>
+        <a class="col-sm-4">
+
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "New Post", new_post_path %>
+        </li>
+          <%- if current_user %>
+              <li>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, date: { confirm: "are you sure?" } %>
+          </li>
+          <% else %>
+        <li>
+          <%= link_to "Login", new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to "Register", new_user_registration_path %>
+        </li>
+          <% end %>
+          
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Page Content -->
     <div class="container">
@@ -68,8 +110,9 @@
                 <%= yield %>
                     
            
+
      <!--     
-    <%= yield %>
-  </body>
+
+    <%# yield %>
+  </body> -->
 </html>
--->
