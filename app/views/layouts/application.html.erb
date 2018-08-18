@@ -7,59 +7,6 @@
     <%= csrf_meta_tags %>
   </head>
 <body>
-      <!-- Navigation -->
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
-      <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"></a>
-          </div>
-          <%= link_to "SnackSnap", root_url, class: "navbar-brand" %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              
-                <span class="sr-only">(current)</span>
-              
-            </li>
-            <li class="nav-item">
-                <%= link_to "New Post", new_post_path %>
-            </li>
-              <%- if current_user %>
-                  <li>
-                      <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
-              </li>
-              <% else %>
-              <li>
-                  <%= link_to "Login", new_user_session_path %>
-              </li>
-              <li>
-                  <%= link_to "Register", new_user_registration_path %>
-              </li>
-              <% end %>
-            <li class="nav-item">
-              
-            </li>
-            <li class="nav-item">
-              
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-
 
 <nav class="navbar navbar-default">
   <div class="navbar-container">
